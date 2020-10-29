@@ -247,7 +247,6 @@ C:\Users\vasil\Documents\Diary\CodingBootcamp\CB11GoupProject\GroupProject\bin\S
 C:\Users\vasil\Documents\Diary\CodingBootcamp\CB11GoupProject\GroupProject\bin\Newtonsoft.Json.xml
 C:\Users\vasil\Documents\Diary\CodingBootcamp\CB11GoupProject\GroupProject\bin\Antlr3.Runtime.pdb
 C:\Users\vasil\Documents\Diary\CodingBootcamp\CB11GoupProject\GroupProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\vasil\Documents\Diary\CodingBootcamp\CB11GoupProject\GroupProject\obj\Debug\GroupProject.csprojAssemblyReference.cache
 C:\Users\vasil\Documents\Diary\CodingBootcamp\CB11GoupProject\GroupProject\obj\Debug\GroupProject.Migrations.Initial.resources
 C:\Users\vasil\Documents\Diary\CodingBootcamp\CB11GoupProject\GroupProject\obj\Debug\GroupProject.Migrations.AddingFlightClass.resources
 C:\Users\vasil\Documents\Diary\CodingBootcamp\CB11GoupProject\GroupProject\obj\Debug\GroupProject.csproj.GenerateResource.cache
