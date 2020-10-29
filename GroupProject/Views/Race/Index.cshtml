@@ -4,5 +4,94 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Races Table</h2>
+<div class="container">
+    <div class="row">
+
+        <h2>Races Table</h2>
+
+        @if (Model.Any())
+        {
+
+
+            <table class="table table-responsive table-striped mt-5 mb-5">
+
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.First().Name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.First().Classification)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.First().AverageHeight)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.First().Photo)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.First().Planets.First().Name)
+                        </th>
+                        <th>
+                            Create
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var race in Model)
+                    {
+                        <tr>
+                            <td>
+                                @race.Name
+                            </td>
+                            <td>
+                                @race.Classification
+                            </td>
+                            <td>
+                                @race.AverageHeight
+                            </td>
+                            <td>
+                                @if (String.IsNullOrEmpty(race.Photo))
+                                {
+                                    @:no photo available
+                                }
+                                else
+                                {
+                                    @race.Photo
+                                }
+                            </td>
+                            <td>
+                                @if (!race.Planets.Any())
+                                {
+                                    @:no planets available
+                                }
+                                else
+                                {
+                                    foreach (var planets in race.Planets)
+                                    {
+                                        @planets.Name
+                                    }
+                                }
+                            </td>
+                            <td>
+                                <span>Edit</span> |
+                                <span>Delete</span>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+
+        }
+        else
+        {
+            <p class="mt-5 mb-5">There are not any Races to view!</p>
+        }
+
+    </div>
+
+</div>
+
 

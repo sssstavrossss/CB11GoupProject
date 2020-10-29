@@ -16,7 +16,7 @@
                         Name = c.String(),
                     })
                 .PrimaryKey(t => t.FlightDepartureID)
-                .ForeignKey("dbo.Planet", t => t.PlanetID, cascadeDelete: true)
+                .ForeignKey("dbo.Planet", t => t.PlanetID, cascadeDelete: false)
                 .Index(t => t.PlanetID);
             
             CreateTable(
@@ -47,7 +47,7 @@
                         Name = c.String(),
                     })
                 .PrimaryKey(t => t.FlightDestinationID)
-                .ForeignKey("dbo.Planet", t => t.PlanetID, cascadeDelete: true)
+                .ForeignKey("dbo.Planet", t => t.PlanetID, cascadeDelete: false)
                 .Index(t => t.PlanetID);
             
             CreateTable(
