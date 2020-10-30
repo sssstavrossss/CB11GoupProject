@@ -68,9 +68,15 @@
                                 }
                                 else
                                 {
+                                    var count = race.Planets.Count();
                                     foreach (var planets in race.Planets)
                                     {
-                                        @planets.Name @:|
+                                        @planets.Name
+                                        if (count > 1)
+                                        {
+                                            @: |
+                                        }
+                                        count--;
                                     }
                                 }
                             </td>

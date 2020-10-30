@@ -23,28 +23,24 @@ namespace GroupProject.Controllers
         {
 
             var races = db.Races
-                .Include(r => r.PlanetRaces);
-
-            var planets = db.Planets;
+                .Include(r => r.PlanetRaces)
+                .ToList();
 
             var viewModel = new List<RaceViewModel>();
 
-            var racePlanets = new List<RacePlanetPartialViewModel>();
-
             foreach (var race in races)
             {
+
+                var racePlanets = new List<RacePlanetPartialViewModel>();
+
                 foreach (var planetRace in race.PlanetRaces)
                 {
                     racePlanets.Add(new RacePlanetPartialViewModel
                     {
                         ID = planetRace.PlanetID,
-                        Name = planets.Find(planetRace.PlanetID).Name
+                        Name = db.Planets.Find(planetRace.PlanetID).Name
                     });
                 }
-            }
-
-            foreach (var race in races)
-            {
 
                 viewModel.Add(new RaceViewModel
                 {
@@ -59,6 +55,15 @@ namespace GroupProject.Controllers
             }
 
             return View(viewModel);
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
         }
     }
 }

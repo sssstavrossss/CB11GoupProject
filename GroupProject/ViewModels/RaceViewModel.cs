@@ -23,9 +23,7 @@ namespace GroupProject.ViewModels
         [DisplayName("Photo")]
         public string Photo { get; set; }
 
-        public List<int> PlanetsID { get; set; }
-
-        public List<string> PlanetsName { get; set; }
+        public List<RacePlanetPartialViewModel> Planets { get; set; }
 
     }
 }
