@@ -25,10 +25,27 @@ namespace GroupProject.Controllers
             var races = db.Races
                 .Include(r => r.PlanetRaces);
 
+            var planets = db.Planets;
+
             var viewModel = new List<RaceViewModel>();
+
+            var racePlanets = new List<RacePlanetPartialViewModel>();
 
             foreach (var race in races)
             {
+                foreach (var planetRace in race.PlanetRaces)
+                {
+                    racePlanets.Add(new RacePlanetPartialViewModel
+                    {
+                        ID = planetRace.PlanetID,
+                        Name = planets.Find(planetRace.PlanetID).Name
+                    });
+                }
+            }
+
+            foreach (var race in races)
+            {
+
                 viewModel.Add(new RaceViewModel
                 {
                     ID = race.RaceID,
@@ -36,8 +53,9 @@ namespace GroupProject.Controllers
                     AverageHeight = race.AverageHeight,
                     Name = race.Name,
                     Photo = race.Photo,
-                    Planets = new List<RacePlanetPartialViewModel>()
+                    Planets = racePlanets
                 }) ;
+                
             }
 
             return View(viewModel);

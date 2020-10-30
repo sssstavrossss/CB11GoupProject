@@ -10,7 +10,7 @@ namespace GroupProject.ViewModels
     {
         public int ID { get; set; }
 
-        [DisplayName("Home Planets")]
+        [DisplayName("Planets Names")]
         public string Name { get; set; }
     }
 }
