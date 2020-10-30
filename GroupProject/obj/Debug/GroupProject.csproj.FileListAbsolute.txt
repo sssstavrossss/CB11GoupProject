@@ -254,3 +254,4 @@ C:\Users\vasil\Documents\Diary\CodingBootcamp\CB11GoupProject\GroupProject\obj\D
 C:\Users\vasil\Documents\Diary\CodingBootcamp\CB11GoupProject\GroupProject\obj\Debug\GroupProject.csproj.CopyComplete
 C:\Users\vasil\Documents\Diary\CodingBootcamp\CB11GoupProject\GroupProject\obj\Debug\GroupProject.dll
 C:\Users\vasil\Documents\Diary\CodingBootcamp\CB11GoupProject\GroupProject\obj\Debug\GroupProject.pdb
+C:\Users\vasil\Documents\Diary\CodingBootcamp\CB11GoupProject\GroupProject\obj\Debug\GroupProject.csprojAssemblyReference.cache
